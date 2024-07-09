@@ -1,7 +1,7 @@
 const { DateTime } = require("luxon");
 
-const API_KEY = `${process.env.REACT_APP_WEATHER_API_KEY}`;
-// console.log(API_KEY);
+const API_KEY = process.env.REACT_APP_VERCEL_API_KEY;
+console.log(API_KEY);
 const BASE_URL = "https://api.openweathermap.org/data/2.5/";
 
 const getWeatherData = (infoType, searchParams) => {
