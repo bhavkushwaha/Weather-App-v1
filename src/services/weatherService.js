@@ -1,7 +1,7 @@
 const { DateTime } = require("luxon");
 
 const API_KEY = process.env.REACT_APP_VERCEL_API_KEY;
-console.log(API_KEY);
+// console.log(API_KEY);
 const BASE_URL = "https://api.openweathermap.org/data/2.5/";
 
 const getWeatherData = (infoType, searchParams) => {
@@ -21,7 +21,7 @@ const formatToLocalTime = (
 ) => DateTime.fromSeconds(secs + offset, { zone: "utc" }).toFormat(format);
 
 const formatCurrent = (data) => {
-  console.log(data);
+  // console.log(data);
   const {
     coord: { lat, lon },
     main: { temp, feels_like, temp_min, temp_max, humidity },
@@ -58,7 +58,7 @@ const formatCurrent = (data) => {
 };
 
 const formatForecastWeather = (secs, offset, data) => {
-  console.log(secs);
+  // console.log(secs);
   //hourly forecast
   const hourly = data
     .map((f) => ({
